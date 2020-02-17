@@ -82,12 +82,12 @@ int device_seek(){
 
 int main(){
 	char c;
-	while(c != 'q'){
+	while(c != 'e'){
 		printf("Press the following keys:\n\
 			r to read from the device;\n\
 			w to write in the device;\n\
 			s to seek in the device;\n\
-			q to quit\n\
+			e to quit\n\
 			or keep reading or writing by pressing a random key\n\n\
 			Please enter:");
 		scanf("%s", &c);
