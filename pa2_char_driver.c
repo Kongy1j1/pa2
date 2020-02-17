@@ -110,7 +110,6 @@ loff_t pa2_char_driver_seek (struct file *pfile, loff_t offset, int whence)
 			printk(KERN_ALERT "ERROR");
 			return -EINVAL;
 	}
-	
 	/*seek before the beginning of the file*/
 	if (position > BUFFER_SIZE){
 		position = BUFFER_SIZE;
@@ -119,6 +118,7 @@ loff_t pa2_char_driver_seek (struct file *pfile, loff_t offset, int whence)
 		position = 0;
 	}
 	pfile->f_pos = position;
+	printk(KERN_ALERT "File position has been updated to: %d\n", position);
 	return 0;
 }
 
